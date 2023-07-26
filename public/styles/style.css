@@ -1,0 +1,311 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+    --padding-inline-section:20px;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+    background-color: #070d22;
+    color:white;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: white;
+}
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+    color: #913fe2;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+ul{
+    list-style: none;
+}
+section{
+    margin-bottom: 50px;
+    /* background-color: #222222; */
+    padding: 20px 0px;
+}
+/* ---------------------------------------general--------------------------------------- */
+.container{
+    max-width: 95%;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;
+ 
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+/*  */
+.some-news{
+    height: 30px;
+    background-color: #913fe2;
+    color: white;
+    text-align: center;
+}
+/* -----------------------------------------------navbar----------------------------------------- */
+.navbar{
+    display: grid;
+    height: 70px;
+    grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+nav a>img{
+    object-fit: cover;
+    width: 150px;
+}
+.center{
+    margin: 0 auto;
+}
+.nav-links{
+    gap: 20px;
+}
+.nav-links li{
+    transition: transform .2s;
+}
+
+.nav-links li:hover{
+    text-decoration: underline;
+}
+.nav-icon{
+    justify-content: right;
+    gap: 10px;
+}
+/* -------------------------------hero-iamges -------------------------------------------------*/
+.carousel {
+    width: 95vw;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .carousel-controls button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .carousel-controls button:hover {
+    color: #333;
+  }
+/* ---------------------------------------------cards----------------------------------------- */
+.cards{
+    gap: 10px;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    height: 700px
+}
+.card{
+    box-shadow: 1px grey;
+    text-align: center;
+    height: 50%;
+    width: 24%;
+}
+.card:hover img{
+    transform: scale(1.1);
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    transition: transform .2s ;
+}
+
+/* -------------------------------------popular section-------------------------------------------    */
+
+.p-card{
+    box-shadow: 1px grey;
+    text-align: center;
+    width: 19%;
+    padding: 10px;
+}
+.p-card img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.hover-button{
+    border:white solid 1px;
+    background-color: #222222;
+    padding: 8px 50px;
+    border-radius: 5px;
+    visibility:collapse;
+    transition: all 0.1s ease;
+    color: white;
+}
+.hover-button:hover{
+    background-color: #913fe2;
+    color: white;
+}
+.p-card:hover{
+    border:white solid 0.5px;
+    border-radius: 2px;
+}
+.p-card:hover .hover-button{
+    visibility: visible;
+}
+/* --------------------------------------Features------------------------------------ */
+.features-cards{
+    padding: 30px;
+    max-height: 236px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.features{
+    width: 100vw;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;
+    background-color: #14192c;
+}
+/* ----------------------------------anime-section -----------------------------------*/
+.anime-names{
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    height: 618px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.anime-name{
+    text-align: center;
+    width: 17%;
+
+}
+.anime-name img{
+        transition: transform .2s;
+}
+.anime-name:hover img{
+    transform: scale(1.1);
+
+}
+/* --------------------------------------footer-------------------------------------- */
+.footer{
+    color: white;
+    align-items: center;
+}
+
+.footer-link{
+    display: grid;
+    height: 319px;
+    grid-template-columns: 1.9fr 1fr 1fr 1.5fr;
+}
+.footer-link>div{
+    padding: 15px;
+}
+
+
+
+.mail {
+    background-color:white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.mail svg {
+    color: #007bff; /* Change the color to any desired color */
+    margin-right: 10px;
+}
+
+.mail input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.mail a {
+    display: flex; /* Added this to make it a flex container */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px; /* Change the color to any desired color */
+    transition: background-color 0.2s ease;
+}
+
+.mail a>svg{
+    align-items: center;
+}
+.mail svg {
+    color:black; /* Change the color to any desired color */
+    vertical-align: middle
+}
+
+.mail a:hover {
+    background-color: #0056b3; /* Change the color to any desired color */
+}
+
+/* --------------------contact-----------------------------  */
+.submit-button{
+    border:#000000 solid 0.5px;
+    background-color: black;
+    color: white;
+    padding: 8px 40px;
+    border-radius: 5px;
+}
+
+.contact-layout{
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    padding: 30px 0px;
+}
